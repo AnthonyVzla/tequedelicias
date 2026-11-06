@@ -1,0 +1,12 @@
+{
+	"__esModule": true,
+	"default": {
+		"appId": "te.llevo.app",
+		"appName": "Te Llevo",
+		"webDir": "www",
+		"android": {
+			"allowMixedContent": false,
+			"backgroundColor": "#111014"
+		}
+	}
+}

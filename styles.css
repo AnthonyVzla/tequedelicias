@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap");
+:root {
+  --yellow: #ffd500;
+  --orange: #ff8a00;
+  --brown: #542d16;
+  --cream: #fff8d9;
+  --red: #e33d2f;
+  --green: #2f8f46;
+  --ink: #2b211a;
+  --line: #e5d6a8;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; font-family: "Nunito", sans-serif; color: var(--ink); background: linear-gradient(145deg, #fff8dc, #ffe9a4); }
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+h1, h2, h3, .brand { font-family: "Baloo 2", sans-serif; }
+img { max-width: 100%; }
+.hidden { display: none !important; }
+.loading { padding: 40px; text-align: center; }
+.auth-page { min-height: 100vh; display: grid; place-items: center; padding: 20px; }
+.auth-card { width: min(100%, 430px); padding: 28px; border-radius: 26px; background: white; box-shadow: 0 25px 70px #79541f33; }
+.auth-logo { width: 210px; max-height: 135px; object-fit: contain; display: block; margin: 0 auto 12px; }
+.auth-card h1 { text-align: center; margin: 0 0 4px; color: var(--brown); }
+.subtitle { text-align: center; margin: 0 0 22px; color: #806b55; }
+.stack { display: grid; gap: 13px; }
+label { display: grid; gap: 6px; font-size: 13px; font-weight: 800; }
+input, select { width: 100%; border: 2px solid var(--line); border-radius: 12px; padding: 11px 12px; background: #fffdf6; outline: none; }
+input:focus, select:focus { border-color: var(--orange); }
+.button { border: 0; border-radius: 12px; padding: 11px 15px; font-weight: 800; color: white; background: var(--brown); }
+.button.yellow { color: var(--brown); background: var(--yellow); box-shadow: 0 4px 0 #dca900; }
+.button.green { background: var(--green); }
+.button.red { background: var(--red); }
+.button.full { width: 100%; }
+.button:disabled { opacity: .55; cursor: not-allowed; }
+.text-button { border: 0; background: none; color: var(--orange); font-weight: 800; }
+.error { color: #bd1e1e; font-size: 13px; }
+.notice { padding: 10px 12px; border-radius: 10px; background: #fff3c5; color: #69501d; font-size: 12px; }
+.layout { min-height: 100vh; max-width: 1180px; margin: auto; padding: 18px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-bottom: 18px; }
+.topbar-brand { display: flex; align-items: center; gap: 10px; }
+.topbar-brand img { width: 66px; height: 66px; object-fit: contain; }
+.topbar h1 { margin: 0; font-size: 24px; color: var(--brown); }
+.points-pill { border-radius: 999px; padding: 9px 14px; background: var(--yellow); color: var(--brown); font-weight: 800; box-shadow: 0 4px 12px #b98c2533; }
+.avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 3px solid var(--yellow); }
+.menu { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.menu-card { min-height: 150px; border: 0; border-radius: 22px; padding: 20px; text-align: left; color: var(--brown); background: white; box-shadow: 0 8px 25px #74471118; transition: transform .15s; }
+.menu-card:hover { transform: translateY(-3px); }
+.menu-card.primary { background: linear-gradient(145deg, var(--yellow), #ffad21); }
+.menu-icon { display: block; font-size: 39px; }
+.menu-card strong { display: block; font-family: "Baloo 2"; font-size: 22px; margin-top: 5px; }
+.panel { margin-top: 18px; border-radius: 22px; padding: 20px; background: white; box-shadow: 0 8px 25px #74471118; }
+.panel h2 { margin-top: 0; color: var(--brown); }
+.grid { display: grid; gap: 14px; }
+.grid.two { grid-template-columns: repeat(2, 1fr); }
+.grid.three { grid-template-columns: repeat(3, 1fr); }
+.card { border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
+.metric { font-family: "Baloo 2"; font-size: 30px; color: var(--orange); }
+.muted { color: #806b55; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { padding: 11px; text-align: left; border-bottom: 1px solid #eee5c9; }
+th { color: #806b55; }
+.game-shell { position: relative; overflow: hidden; border-radius: 18px; background: #85d8ef; }
+#gameCanvas { width: 100%; height: min(55vh, 430px); display: block; touch-action: none; }
+.game-overlay { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 20px; background: #fff4cae8; }
+.game-overlay strong { font-family: "Baloo 2"; font-size: 34px; color: var(--brown); }
+.prize { display: grid; grid-template-columns: 76px 1fr auto; align-items: center; gap: 12px; }
+.prize-icon { height: 76px; border-radius: 14px; display: grid; place-items: center; font-size: 38px; background: var(--cream); }
+.toast { position: fixed; z-index: 10; left: 50%; bottom: 20px; transform: translateX(-50%); padding: 12px 18px; border-radius: 12px; color: white; background: var(--brown); box-shadow: 0 5px 20px #0004; }
+.toast.error { background: var(--red); }
+.admin-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.admin-tabs .button { background: white; color: var(--brown); border: 1px solid var(--line); }
+.admin-tabs .button.active { color: white; background: var(--brown); }
+.toolbar { display: flex; gap: 9px; align-items: end; flex-wrap: wrap; }
+.toolbar label { flex: 1; min-width: 180px; }
+.alert-row { border-left: 4px solid var(--red); }
+.avatar-upload { display: flex; align-items: center; gap: 14px; }
+.avatar-upload img { width: 82px; height: 82px; border-radius: 50%; object-fit: cover; border: 4px solid var(--yellow); }
+.modal-backdrop { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; padding: 20px; background: #321d1177; }
+.modal { width: min(100%, 420px); border-radius: 20px; padding: 22px; background: white; box-shadow: 0 20px 60px #0005; }
+.code-input { letter-spacing: 10px; text-align: center; font-size: 24px; font-weight: 800; }
+@media (max-width: 700px) {
+  .layout { padding: 12px; }
+  .topbar-brand img { width: 50px; height: 50px; }
+  .menu, .grid.two, .grid.three { grid-template-columns: 1fr; }
+  .menu-card { min-height: 105px; }
+  .prize { grid-template-columns: 58px 1fr; }
+  .prize .button { grid-column: 1 / -1; }
+}
